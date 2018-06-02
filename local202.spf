@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>migu_autosense</string>
+			<key>host</key>
+			<string>192.168.1.202</string>
+			<key>kcid</key>
+			<string>-1324003965625108337</string>
+			<key>name</key>
+			<string>192.168.1.202</string>
+			<key>port</key>
+			<integer>3307</integer>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentFilter</key>
+			<dict>
+				<key>filterComparison</key>
+				<string>≥</string>
+				<key>filterComparisonTag</key>
+				<integer>4</integer>
+				<key>filterField</key>
+				<string>ttid</string>
+				<key>filterValue</key>
+				<string>681169</string>
+				<key>firstBetweenField</key>
+				<string>682169</string>
+				<key>menuLabel</key>
+				<string>`ttid` &gt;= '681169'</string>
+				<key>secondBetweenField</key>
+				<string>682170</string>
+			</dict>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK4HCBUWFxgZHSQpLTE0OFUkbnVsbNMJ
+			CgsMEBRXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6MNDg+AAoAD
+			gASjERITgAWABoAIgA1UdHlwZVRyb3dzVGtleXNfECZTZWxlY3Rp
+			b25EZXRhaWxUeXBlUHJpbWFyeUtleWVkRGV0YWlsc9MJCgsaGxyg
+			oIAH0h4fICFaJGNsYXNzbmFtZVgkY2xhc3Nlc18QE05TTXV0YWJs
+			ZURpY3Rpb25hcnmjICIjXE5TRGljdGlvbmFyeVhOU09iamVjdNIK
+			CyUooiYngAmAC4AM0gsqKyxZTlMuc3RyaW5ngApdcmVzdWx0aW5m
+			b19pZNIeHy4vXxAPTlNNdXRhYmxlU3RyaW5noy4wI1hOU1N0cmlu
+			Z9ILKiszgApZY3JlYXR0aW1l0h4fNTZeTlNNdXRhYmxlQXJyYXmj
+			NTcjV05TQXJyYXnSHh8iOaIiI18QD05TS2V5ZWRBcmNoaXZlctE8
+			PVRkYXRhgAEACAARABoAIwAtADIANwBGAEwAUwBbAGYAbQBxAHMA
+			dQB3AHsAfQB/AIEAgwCIAI0AkgC7AMIAwwDEAMYAywDWAN8A9QD5
+			AQYBDwEUARcBGQEbAR0BIgEsAS4BPAFBAVMBVwFgAWUBZwFxAXYB
+			hQGJAZEBlgGZAasBrgGzAAAAAAAAAgEAAAAAAAAAPgAAAAAAAAAA
+			AAAAAAAAAbU=
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {977, 557}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>
+
+
+-- UPDATE resultinfo_4 SET TestEndTime = "20180125092516"
+-- WHERE TestBeginTime = '20180125091516' ;
+
+
+SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime,`TestEndTime` FROM resultinfo_4 WHERE addtime LIKE '2018%';
+
+-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+-- WHERE TestNum='1' AND addtime LIKE '2018%' AND ttid = "682170";  
+
+
+
+
+
+
+-- 多表查询
+/* SELECT test.TestKeyCode,test.TestKeyName,test.ServiceCode,result.testkey_id 
+FROM testkey AS test,resultinfo_4 AS result 
+WHERE test.testkey_id=result.testkey_id AND result.addtime LIKE '2018%'
+
+UPDATE test SET test.TestKeyName = 'test213'  */
+
+</string>
+			<key>table</key>
+			<string>resultinfo_4</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>200</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>-- UPDATE resultinfo_4 SET TestEndTime = "20180125092516"
+-- WHERE TestBeginTime = '20180125091516' ;
+
+
+SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime,`TestEndTime` FROM resultinfo_4 WHERE addtime LIKE '2018%'</string>
+		<string>-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+-- WHERE TestNum='1' AND addtime LIKE '2018%' AND ttid = "682170";  
+
+
+
+
+
+
+-- 多表查询
+/* SELECT test.TestKeyCode,test.TestKeyName,test.ServiceCode,result.testkey_id 
+FROM testkey AS test,resultinfo_4 AS result 
+WHERE test.testkey_id=result.testkey_id AND result.addtime LIKE '2018%'
+
+UPDATE test SET test.TestKeyName = 'test213'  */</string>
+		<string>-- UPDATE resultinfo_4 SET TestEndTime = "20180125092516"
+-- WHERE TestBeginTime = '20180125091516' ;
+
+
+SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime,`TestEndTime` FROM resultinfo_4 WHERE addtime LIKE '2018%';
+-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+-- WHERE TestNum='1' AND addtime LIKE '2018%' AND ttid = "682170";  
+
+
+
+
+
+
+-- 多表查询
+/* SELECT test.TestKeyCode,test.TestKeyName,test.ServiceCode,result.testkey_id 
+FROM testkey AS test,resultinfo_4 AS result 
+WHERE test.testkey_id=result.testkey_id AND result.addtime LIKE '2018%'
+
+UPDATE test SET test.TestKeyName = 'test213'  */</string>
+		<string>UPDATE resultinfo_4 SET TestEndTime = "20180125092516"
+WHERE TestBeginTime = '20180125091516';
+SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime,`TestEndTime` FROM resultinfo_4 WHERE addtime LIKE '2018%';
+-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+-- WHERE TestNum='1' AND addtime LIKE '2018%' AND ttid = "682170";  
+
+
+
+
+
+
+-- 多表查询
+/* SELECT test.TestKeyCode,test.TestKeyName,test.ServiceCode,result.testkey_id 
+FROM testkey AS test,resultinfo_4 AS result 
+WHERE test.testkey_id=result.testkey_id AND result.addtime LIKE '2018%'
+
+UPDATE test SET test.TestKeyName = 'test213'  */</string>
+		<string>SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime,`TestEndTime` FROM resultinfo_4 WHERE addtime LIKE '2018%'</string>
+		<string>UPDATE resultinfo_4 SET TestEndTime = "20180125092516"
+WHERE TestBeginTime = '20180125091516'</string>
+		<string>-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+-- WHERE TestNum='1' AND addtime LIKE '2018%' AND ttid = "682170";  
+
+UPDATE resultinfo_4 SET TestEndTime = "20180125092516"
+WHERE TestBeginTime = '20180125091516' 
+
+
+SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime,`TestEndTime` FROM resultinfo_4 WHERE addtime LIKE '2018%'</string>
+		<string>-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+-- WHERE TestNum='1' AND addtime LIKE '2018%' AND ttid = "682170";  
+
+UPDATE resultinfo_4 SET TestEndTime = "20180125092516"
+WHERE TestBeginTime = '20180125091516'</string>
+		<string>-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+-- WHERE TestNum='1' AND addtime LIKE '2018%' AND ttid = "682170";  
+
+-- UPDATE resultinfo_4 SET TestBeginTime = "20180125091516"
+-- WHERE TestBeginTime = '20180124151943' ; 
+
+
+SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime,`TestEndTime` FROM resultinfo_4 WHERE addtime LIKE '2018%'</string>
+		<string>-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+-- WHERE TestNum='1' AND addtime LIKE '2018%' AND ttid = "682170";  
+
+-- UPDATE resultinfo_4 SET TestBeginTime = "20180125091516"
+-- WHERE TestBeginTime = '20180124151943' ; 
+
+
+SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime FROM resultinfo_4 WHERE addtime LIKE '2018%'</string>
+		<string>-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+-- WHERE TestNum='1' AND addtime LIKE '2018%' AND ttid = "682170";  
+
+UPDATE resultinfo_4 SET TestBeginTime = "20180125091516"
+WHERE TestBeginTime = '20180124151943';
+SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime FROM resultinfo_4 WHERE addtime LIKE '2018%';
+-- 多表查询
+/* SELECT test.TestKeyCode,test.TestKeyName,test.ServiceCode,result.testkey_id 
+FROM testkey AS test,resultinfo_4 AS result 
+WHERE test.testkey_id=result.testkey_id AND result.addtime LIKE '2018%'
+
+UPDATE test SET test.TestKeyName = 'test213'  */</string>
+		<string>-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+-- WHERE TestNum='1' AND addtime LIKE '2018%' AND ttid = "682170";  
+
+UPDATE resultinfo_4 SET TestBeginTime = "20180125091516"
+WHERE TestBeginTime = '20180124151943'</string>
+		<string>-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+
+UPDATE resultinfo_4 SET `TestBeginTime` = "20180125091516"
+WHERE TestBeginTime = '20180124151943';
+WHERE TestNum='1' AND addtime LIKE '2018%' AND ttid = "682170"</string>
+		<string>-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+
+UPDATE resultinfo_4 SET `TestBeginTime` = "20180125091516"
+WHERE TestBeginTime = '20180124151943'</string>
+		<string>-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+-- UPDATE resultinfo_4 SET addtime = "2018-01-25 09:15:43"
+-- WHERE addtime = '2018-01-24 16:05:43' ; 
+-- WHERE TestNum='1' AND addtime LIKE '2018%' AND ttid = "682170";  
+
+SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime FROM resultinfo_4 WHERE addtime LIKE '2018%'</string>
+		<string>-- SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime FROM resultinfo_4 WHERE addtime LIKE '2018%';
+
+
+-- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+-- UPDATE resultinfo_4 SET addtime = "2018-01-25 09:15:43"
+-- WHERE addtime = '2018-01-24 16:05:43' ; 
+-- WHERE TestNum='1' AND addtime LIKE '2018%' AND ttid = "682170";  
+
+SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime FROM resultinfo_4 WHERE addtime LIKE '2018%'</string>
+		<string>/* UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+UPDATE resultinfo_4 set addtime = "2018-01-25 09:15:43"
+WHERE addtime = '2018-01-24 16:05:43' ; 
+WHERE TestNum='1' and addtime LIKE '2018%' and ttid = "682170";  
+
+SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime FROM resultinfo_4 WHERE addtime LIKE '2018%'; */</string>
+		<string>SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime FROM resultinfo_4 WHERE addtime LIKE '2018%'</string>
+		<string>SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime FROM resultinfo_4 WHERE addtime LIKE '2018%';
+/* -- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+UPDATE resultinfo_4 set addtime = "2018-01-25 09:15:43"
+WHERE addtime = '2018-01-24 16:05:43' ; 
+WHERE TestNum='1' and addtime LIKE '2018%' and ttid = "682170";  */
+
+/* SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime FROM resultinfo_4 WHERE addtime LIKE '2018%'; */</string>
+		<string>/* -- UPDATE resultinfo_4 set TestValue = "10",TestResult = "02" 
+UPDATE resultinfo_4 set addtime = "2018-01-25 09:15:43"
+WHERE addtime = '2018-01-24 16:05:43' ; 
+WHERE TestNum='1' and addtime LIKE '2018%' and ttid = "682170";  */
+
+/* SELECT device_id,DevType,ttid,TestValue,TestResult,TestNum,addtime,TestBeginTime FROM resultinfo_4 WHERE addtime LIKE '2018%'; */</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.6.14</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
